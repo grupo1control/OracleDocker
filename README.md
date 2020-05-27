@@ -1,12 +1,12 @@
 from https://github.com/oracle/docker-images
 
-###Create the docker image
+###Crear la imagen del contenerdor ejecutando el .sh del repo oficial de Oracle
 To assist in building the images, you can use the [buildDockerImage.sh](https://github.com/oracle/docker-images/blob/master/OracleDatabase/SingleInstance/dockerfiles/buildDockerImage.sh) script. See below for instructions and usage.
 
 
-#### Running Oracle Database 18c Express Edition in a Docker container
-(from )
+#### Arrancar el contenedor usando esta estructura
 To run your Oracle Database 18c Express Edition Docker image use the **docker run** command as follows:
+*Cambiar la ruta del volumen de persistencia por la de ustedes.
 
 docker run --name oracleDb \
 -p 1521:1521 -p 35518:5500 \
