@@ -1,6 +1,6 @@
 from https://github.com/oracle/docker-images
 
-###Crear la imagen del contenerdor ejecutando el .sh del repo oficial de Oracle
+### Crear la imagen del contenedor ejecutando el .sh del repo oficial de Oracle
 To assist in building the images, you can use the [buildDockerImage.sh](https://github.com/oracle/docker-images/blob/master/OracleDatabase/SingleInstance/dockerfiles/buildDockerImage.sh) script. See below for instructions and usage.
 
 
