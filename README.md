@@ -1,8 +1,20 @@
-from https://github.com/oracle/docker-images
+### Get the docker image
 
-###Create the docker image
-To assist in building the images, you can use the [buildDockerImage.sh](https://github.com/oracle/docker-images/blob/master/OracleDatabase/SingleInstance/dockerfiles/buildDockerImage.sh) script. See below for instructions and usage.
+Pull the image from our repository,
+docker pull grupouno/oracle-xe-18:firsttry
 
+or
+
+Create your own image, following the [buildDockerImage.sh](https://github.com/oracle/docker-images/blob/master/OracleDatabase/SingleInstance/dockerfiles/buildDockerImage.sh) script. See below for instructions and usage.
+
+./buildDockerImage.sh -v 18.4.0 -x 
+
+
+#### Create the Volume directories
+mkdir /yourPath/
+
+#### Make folder writable for anyone
+chmod 777 /yourPath/
 
 #### Running Oracle Database 18c Express Edition in a Docker container
 (from )
@@ -11,8 +23,8 @@ To run your Oracle Database 18c Express Edition Docker image use the **docker ru
 docker run --name oracleDb \
 -p 1521:1521 -p 35518:5500 \
 -e ORACLE_PWD=portafolio \
--v /home/dada/Documents/Portafolio/oradata:/opt/oracle/oradata \
--v /home/dada/Documents/Portafolio/script/opt/oracle/scripts/setup \
+-v /yourPath/:/opt/oracle/oradata \
+-v /yourPath/:/opt/oracle/scripts/setup \
 oracle/database:18.4.0-xe
 	
 	Parameters:
