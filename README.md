@@ -6,9 +6,7 @@ Pull the image from our repository
 
 or
 
-Create your own image, following the [buildDockerImage.sh](https://github.com/oracle/docker-images/blob/master/OracleDatabase/SingleInstance/dockerfiles/buildDockerImage.sh) script. See below for instructions and usage.
-
-	./buildDockerImage.sh -v 18.4.0 -x 
+Create your own image, following the [Official Instruccions](https://github.com/oracle/docker-images/tree/master/OracleDatabase/SingleInstance).
 
 
 #### Create the Volume directories
@@ -52,13 +50,7 @@ Once the container has been started and the database created you can connect to 
 	sqlplus system/<your password>@//localhost:1521/XE
 	sqlplus pdbadmin/<your password>@//localhost:1521/XEPDB1
 
-The Oracle Database inside the container also has Oracle Enterprise Manager Express configured. To access OEM Express, start your browser and follow the URL:
 
-	https://localhost:5500/em/
-
-On the first startup of the container a random password will be generated for the database if not provided. You can find this password in the output line:
-
-	ORACLE PASSWORD FOR SYS AND SYSTEM:
 
 **Note:** The ORACLE_SID for Express Edition is always `XE` and cannot be changed, hence there is no ORACLE_SID parameter provided for the XE build.
 
