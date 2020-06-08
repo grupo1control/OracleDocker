@@ -16,9 +16,9 @@ mkdir /yourPath/
 #### Make folder writable for anyone
 chmod 777 /yourPath/
 
-#### Running Oracle Database 18c Express Edition in a Docker container
-(from )
+#### Arrancar el contenedor usando esta estructura
 To run your Oracle Database 18c Express Edition Docker image use the **docker run** command as follows:
+*Cambiar la ruta del volumen de persistencia por la de ustedes.
 
 docker run --name oracleDb \
 -p 1521:1521 -p 35518:5500 \
